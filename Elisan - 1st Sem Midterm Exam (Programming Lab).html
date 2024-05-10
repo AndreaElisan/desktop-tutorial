@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+        <!-- Background Image -->
+        <style>
+        body {
+          background-image: url('https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?cs=srgb&dl=pexels-francesco-ungaro-998641.jpg&fm=jpg');
+          background-size: cover;
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+        }
+        </style>
+
+        <!-- Title -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Solar System Scout</title>
+        <style>
+           html {
+            font-size: 22px
+           }
+
+           body {
+            background-color: #000000;
+            color: #ffffff;
+           }
+        </style>
+<body>
+
+<h1>Solar System Scout</h1>
+
+<!-- Navigation Links -->
+<nav>
+<ul>
+<li><a href="#mercury">Mercury</a></li>
+<li><a href="#venus">Venus</a></li>
+<li><a href="#earth">Earth</a></li>
+<li><a href="#mars">Mars</a></li>
+<li><a href="#jupiter">Jupiter</a></li>
+<li><a href="#saturn">Saturn</a></li>
+<li><a href="#uranus">Uranus</a></li>
+<li><a href="#neptune">Neptune</a></li>
+</ul>
+</nav>
+
+<!-- Information about Mercury -->
+<section id="mercury">
+    <h2>Mercury</h2>
+    <IMG SRC="https://media.baamboozle.com/uploads/images/93110/1654234299_998904_gif-url.gif" alt="Transparent GIF of Mercury">
+    <p>Diameter: 4,879.4 km</p>
+    <p>Mass:  3.30 x 10^23 kg</p>
+    <p>Average Temperature: 167°C</p>
+    <p>Moons: None</p>
+    <!-- Display calculated orbital period using JavaScript -->
+
+    <p>Orbital Period: <span id="mercury-orbital-period"></span> days</p>
+</section>
+    <!-- JavaScript for Orbital Period Calculation -->
+    <script>
+    // Constants (G, m_s, and mercury)
+    const G = 0.0000000000667430; // Gravitational constant (m^3 kg^-1 s^-2)
+    const M_s = 1989000000000000000000000000000; // Mass of the Sun (kg)
+    const a_mercury = 57909335748; // Semi-major axis of Mercury's orbit (m)
+    // Function to calculate orbital period into days (60secs*60mins*24hrs = 86,400 days) (1 year=365.25 days=31,557,600 seconds)
+    function calculateOrbitalPeriod(semiMajorAxis) {
+    return 2 * Math.PI * Math.sqrt(Math.pow(semiMajorAxis, 3) / (G * M_s)) / 86400;
+    }
+    // Display Mercury's orbital period
+    document.getElementById('mercury-orbital-period').innerText = calculateOrbitalPeriod(a_mercury).toFixed(2);
+    </script>
+<!-- Description of Mercury -->
+<p style="text-align: justify;">
+    The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth's Moon. 
+    From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth, 
+    and the sunlight would be as much as seven times brighter. Mercury's surface resembles that of Earth's moon, scarred 
+    by many impact craters resulting from collisions with meteoroids and comets. 
+</p>
+
+<!-- Information about Venus -->
+<section id="venus">
+    <h2>Venus</h2>
+    <IMG SRC="https://venus.ws/wp-content/themes/venus/gif/moon.gif" height="480" width="480" alt="Transparent GIF of Venus">
+    <p>Diameter: 12,104 km</p>
+    <p>Mass:  4.86 x 10^24 kg</p>
+    <p>Average Temperature: 460°C</p>
+    <p>Moons: None</p>
+    <!-- Display calculated orbital period using JavaScript -->
+    
+    <p>Orbital Period: <span id="venus-orbital-period"></span> days</p>
+</section>
+    <!-- JavaScript for Orbital Period Calculation -->
+    <script>
+    // Constants (venus)
+    const a_venus = 108204139877; // Semi-major axis of Venus's orbit (m)
+    // Function to calculate orbital period into days (60secs*60mins*24hrs = 86,400 days) (1 year=365.25 days=31,557,600 seconds)
+    function calculateOrbitalPeriod(semiMajorAxis) {
+    return 2 * Math.PI * Math.sqrt(Math.pow(semiMajorAxis, 3) / (G * M_s)) / 86400;
+    }
+    // Display Venus's orbital period
+    document.getElementById('venus-orbital-period').innerText = calculateOrbitalPeriod(a_venus).toFixed(2);
+    </script>
+<!-- Description of Venus -->
+<p style="text-align: justify;">
+    Similar in size and structure to Earth, Venus has been called Earth's twin. Venus and Earth are similar in size, 
+    mass, density, composition, and gravity. However, Venus has a thick, toxic atmosphere filled with carbon dioxide 
+    and it's perpetually shrouded in thick, yellowish clouds of mostly sulfuric acid that trap heat, causing a runaway
+    greenhouse effect. Despite Mercury being closer to the Sun, Venus is the hottest planet in the entire solar system.
+</p>
+
+<!-- Information about Earth -->
+<section id="earth">
+    <h2>Earth</h2>
+    <IMG SRC="https://earthsky.org/upl/2023/07/Rotating_earth_wikimedia-commons.gif" alt="Transparent GIF of Earth">
+    <p>Diameter: 12,742 km</p>
+    <p>Mass: 5.97 x 10^24 kg</p>
+    <p>Average Temperature: 15°C</p>
+    <p>Moons: 1 (The Moon)</p>
+    <!-- Display calculated orbital period using JavaScript -->
+    <p>Orbital Period: <span id="earth-orbital-period"></span> days</p>
+    </section>
+    <!-- JavaScript for Orbital Period Calculation -->
+    <script>
+    // Constants (earth)
+    const a_earth = 149597870700; // Semi-major axis of Earth's orbit (m)
+    // Function to calculate orbital period into days (60secs*60mins*24hrs = 86,400 days) (1 year=365.25 days=31,557,600 seconds)
+    function calculateOrbitalPeriod(semiMajorAxis) {
+    return 2 * Math.PI * Math.sqrt(Math.pow(semiMajorAxis, 3) / (G * M_s)) / 86400;
+    }
+    // Display Earth's orbital period
+    document.getElementById('earth-orbital-period').innerText = calculateOrbitalPeriod(a_earth).toFixed(2);
+    </script>
+<!-- Description of Earth -->
+<p style="text-align: justify;">
+    Earth—our home planet—is the only place we know of so far that's inhabited by living things. Earth's atmosphere is 78 
+    percent nitrogen, 21 percent oxygen and 1 percent other ingredients—the perfect balance to breathe and live.It's also 
+    the only planet in our solar system with liquid water on the surface. Earth is the biggest terrestrial planet, all of 
+    which are made of rock and metal, and the only planet with a single moon. 
+</p>
+
+<!-- Information about Mars -->
+<section id="mars">
+    <h2>Mars</h2>
+    <IMG SRC="https://az.genial.ly/users/5a4d01ff02a5b20c100fd842/5a758951642785316c33d6e8/5a758951642785316c33d6e9/5ec26446-7e61-475a-91eb-954816315013.gif" 
+    alt="Transparent GIF of Mars">
+    <p>Diameter: 6,779 km</p>
+    <p>Mass: 6.41 x 10^23 kg</p>
+    <p>Average Temperature: -60°C</p>
+    <p>Moons: 2 (Phobos and Deimos)</p>
+    <!-- Display calculated orbital period using JavaScript -->
+    <p>Orbital Period: <span id="mars-orbital-period"></span> days</p>
+    </section>
+    <!-- JavaScript for Orbital Period Calculation -->
+    <script>
+    // Constants (mars)
+    const a_mars = 228480827920; // Semi-major axis of Mars's orbit (m)
+    // Function to calculate orbital period into days (60secs*60mins*24hrs = 86,400 days) (1 year=365.25 days=31,557,600 seconds)
+    function calculateOrbitalPeriod(semiMajorAxis) {
+    return 2 * Math.PI * Math.sqrt(Math.pow(semiMajorAxis, 3) / (G * M_s)) / 86400;
+    }
+    // Display Mars's orbital period
+    document.getElementById('mars-orbital-period').innerText = calculateOrbitalPeriod(a_mars).toFixed(2);
+    </script>
+<!-- Description of Mars -->
+<p style="text-align: justify;">
+    Mars is a dusty, cold, desert world with a very thin atmosphere. Named by the ancient Romans for their god of war because
+    its reddish color was reminiscent of blood, Mars' reddish look is due to oxidization—or rusting—of iron in the rocks, 
+    regolith (Martian “soil”), and dust on it's surface that gets kicked up into the atmosphere that from a distance, makes 
+    the planet appear mostly red.
+</p>
+
+<!-- Separation of Terrestrial Planets and Gas Giants, Asteroid Belt -->
+<IMG SRC="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e4782c52-642e-439b-bfaf-124ce8f2c9ec/d6brdm4-edc8fd07-4aad-4aef-b70a-c4993a2b2b95.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2U0NzgyYzUyLTY0MmUtNDM5Yi1iZmFmLTEyNGNlOGYyYzllY1wvZDZicmRtNC1lZGM4ZmQwNy00YWFkLTRhZWYtYjcwYS1jNDk5M2EyYjJiOTUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.PiBQOSZ1POvwAXe85rVirANMrn0ipt3f1CYiymS--s4" 
+width="1480" height="750" alt="Transparent image of the Asteroid Belt">
+
+<!-- Information about Jupiter -->
+<section id="jupiter">
+    <h2>Jupiter</h2>
+    <IMG SRC="https://i.gifer.com/WME4.gif" height="600" width="600" alt="Transparent GIF of Jupiter">
+    <p>Diameter: 139,820 km</p>
+    <p>Mass: 1.89 x 10^27 kg</p>
+    <p>Average Temperature: -145°C</p>
+    <p>Moons: 95 (Jupiter's four largest moons, called the Galilean satellites after Italian Astronomer Galileo Galilei, are Europa, Ganymede, Callisto, and Io)</p>
+    <!-- Display calculated orbital period using JavaScript -->
+    <p>Orbital Period: <span id="jupiter-orbital-period"></span> days</p>
+    </section>
+    <!-- JavaScript for Orbital Period Calculation -->
+    <script>
+    // Constants (jupiter)
+    const a_jupiter = 778327801678; // Semi-major axis of Jupiter's orbit (m)
+    // Function to calculate orbital period into days (60secs*60mins*24hrs = 86,400 days) (1 year=365.25 days=31,557,600 seconds)
+    function calculateOrbitalPeriod(semiMajorAxis) {
+    return 2 * Math.PI * Math.sqrt(Math.pow(semiMajorAxis, 3) / (G * M_s)) / 86400;
+    }
+    // Display Jupiter's orbital period
+    document.getElementById('jupiter-orbital-period').innerText = calculateOrbitalPeriod(a_jupiter).toFixed(2);
+    </script>
+<!-- Description of Jupiter -->
+<p style="text-align: justify;">
+    Jupiter is, by far, the largest planet in the solar system - more than twice as massive as all the other planets combined.
+    It is a giant planet composed mainly of hydrgen and helium; as a gas giant, Jupiter has no solid surface. Jupiter is well-known
+    for The Great Red Spot, a storm that has been raging on for 100 years.
+</p>
+
+<!-- Information about Saturn -->
+<section id="saturn">
+    <h2>Saturn</h2>
+    <IMG SRC="https://www.olsonindependent.com/solarSystem/video/finals/saturn.gif" height="800" width="800" alt="Transparent GIF of Saturn">
+    <p>Diameter: 116,460 km</p>
+    <p>Mass: 5.68 x 10^26 kg</p>
+    <p>Average Temperature: -288.4°C</p>
+    <p>Moons: 146 (Seven Major Moons: Mimas, Enceladus, Tethys, Dione, Rhea, Titan, and Iapetus)</p>
+    <!-- Display calculated orbital period using JavaScript -->
+    <p>Orbital Period: <span id="saturn-orbital-period"></span> days</p>
+    </section>
+    <!-- JavaScript for Orbital Period Calculation -->
+    <script>
+    // Constants (saturn)
+    const a_saturn = 1426984169033; // Semi-major axis of Saturn's orbit (m)
+    // Function to calculate orbital period into days (60secs*60mins*24hrs = 86,400 days) (1 year=365.25 days=31,557,600 seconds)
+    function calculateOrbitalPeriod(semiMajorAxis) {
+    return 2 * Math.PI * Math.sqrt(Math.pow(semiMajorAxis, 3) / (G * M_s)) / 86400;
+    }
+    // Display Saturn's orbital period
+    document.getElementById('saturn-orbital-period').innerText = calculateOrbitalPeriod(a_saturn).toFixed(2);
+    </script>
+<!-- Description of Saturn -->
+<p style="text-align: justify;">
+    Adorned with thousands of beautiful ringlets, Saturn is unique among the planets. It is not the only planet to have rings—made
+    of chunks of ice and rock—but none are as spectacular or as complicated as Saturn's. Saturn's rings are thought to be pieces of 
+    comets, asteroids or shattered moons that broke up before they reached the planet, torn apart by Saturn's powerful gravity, and 
+    orbiting around the planet at different speeds.
+</p>
+
+<!-- Information about Uranus -->
+<section id="uranus">
+    <h2>Uranus</h2>
+    <IMG SRC="https://www.centraldatacore.com/wp-content/uploads/PG3-Uranus-500-P-Anim.gif" alt="Transparent GIF of Uranus">
+    <p>Diameter: 50,724 km</p>
+    <p>Mass: 8.68 x 10^25 kg</p>
+    <p>Average Temperature: -195°C</p>
+    <p>Moons: 27 (Five Major Moons: Miranda, Ariel, Umbriel, Titania, and Oberon)</p>
+    <!-- Display calculated orbital period using JavaScript -->
+    <p>Orbital Period: <span id="uranus-orbital-period"></span> days</p>
+    </section>
+    <!-- JavaScript for Orbital Period Calculation -->
+    <script>
+    // Constants (uranus)
+    const a_uranus = 2870633540862; // Semi-major axis of Uranus's orbit (m)
+    // Function to calculate orbital period into days (60secs*60mins*24hrs = 86,400 days) (1 year=365.25 days=31,557,600 seconds)
+    function calculateOrbitalPeriod(semiMajorAxis) {
+    return 2 * Math.PI * Math.sqrt(Math.pow(semiMajorAxis, 3) / (G * M_s)) / 86400;
+    }
+    // Display Uranus's orbital period
+    document.getElementById('uranus-orbital-period').innerText = calculateOrbitalPeriod(a_uranus).toFixed(2);
+    </script>
+<!-- Description of Uranus -->
+<p style="text-align: justify;">
+    Uranus is very cold and windy. It is surrounded by faint rings and more than two dozen small moons as it rotates at a 
+    nearly 90-degree angle from the plane of its orbit. This unique tilt makes Uranus appear to spin on its side. Uranus is 
+    blue-green in color due to large amounts of methane, which absorbs red light but allows blues to be reflected back into 
+    space. The atmosphere is mostly hydrogen and helium, but also includes large amounts of water, ammonia and methane. The 
+    planet was named after Uranus, the Greek god of the sky, who was also the father of Kronos (or Saturn in Roman mythology).
+</p>
+
+<!-- Information about Neptune -->
+<section id="neptune">
+    <h2>Neptune</h2>
+    <IMG SRC="https://www.centraldatacore.com/wp-content/uploads/PG4-Neptune-500-P-Anim.gif" alt="Transparent GIF of Neptune">
+    <p>Diameter: 49,244 km</p>
+    <p>Mass: 1.02 x 10^26 kg</p>
+    <p>Average Temperature: -214°C</p>
+    <p>Moons: 14 (Major Moon: Triton)</p>
+    <!-- Display calculated orbital period using JavaScript -->
+    <p>Orbital Period: <span id="neptune-orbital-period"></span> days</p>
+    </section>
+    <!-- JavaScript for Orbital Period Calculation -->
+    <script>
+    // Constants (neptune)
+    const a_neptune = 4497076550900; // Semi-major axis of Neptune's orbit (m)
+    // Function to calculate orbital period into days (60secs*60mins*24hrs = 86,400 days) (1 year=365.25 days=31,557,600 seconds)
+    function calculateOrbitalPeriod(semiMajorAxis) {
+    return 2 * Math.PI * Math.sqrt(Math.pow(semiMajorAxis, 3) / (G * M_s)) / 86400;
+    }
+    // Display Neptune's orbital period
+    document.getElementById('neptune-orbital-period').innerText = calculateOrbitalPeriod(a_neptune).toFixed(2);
+    </script>
+<!-- Description of Neptune -->
+<p style="text-align: justify;">
+    Dark, cold and whipped by supersonic winds, giant Neptune is the eighth and most distant major planet orbiting our Sun. 
+    More than 30 times as far from the Sun as Earth, Neptune is not visible to the naked eye. In 2011, Neptune completed its 
+    first 165-year orbit since its discovery. The planet's rich blue color comes from methane in its atmosphere, which absorbs 
+    red wavelengths of light but allows blue ones to be reflected back into space.
+</p>
+
+<p>
+    <i>All information based on NASA's official website, and all images used can be found online.</i>
+</p>
+<a href="https://www.nasa.gov/"><img src="https://gpm.nasa.gov/sites/default/files/document_files/NASA-Logo-Large.png" alt="NASA website" style="width:70px;height:53px;"></a>
+</body>
+</html>
